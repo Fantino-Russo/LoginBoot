@@ -14,7 +14,7 @@ namespace Sistema_OT.Models
         {
             Usuarios usuario = new Usuarios();
 
-            string query = "Select UserID, Contrasenia, Administrador WHERE UserID = @pid and Contrasenia = @pcontra";
+            string query = "Select UserID, Contrasenia, Administrador from Usuarios WHERE UserID = @pid and Contrasenia = @pcontra";
             ConexionDB conexionDB = new ConexionDB();
             conexionDB.AbrirConexion();
             using (SqlCommand command = new SqlCommand(query, conexionDB.con))

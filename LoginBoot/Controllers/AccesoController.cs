@@ -17,6 +17,11 @@ namespace LoginBoot.Controllers
         public IActionResult Index(string id, string contra)
         {
             Usuarios usuario = new Usuarios().encontrarUsuario(id, contra);
+
+            if (usuario != null)
+            {
+                
+            }
             return View();
         }
     }
